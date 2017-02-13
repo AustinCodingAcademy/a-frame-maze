@@ -48,7 +48,7 @@ document.querySelector('a-scene').addEventListener('render-target-loaded', funct
             el.appendChild(audio);
             audio.setAttribute('material', 'color: blue;');
             audio.setAttribute('geometry', 'primitive: box;');
-            audio.setAttribute('sound', 'src: url(Sheeps.mp3); autoplay: true;');
+            audio.setAttribute('sound', 'src: url(Halloween.mp3); autoplay: true; loop:true;');
             audio.setAttribute('position', position);
             audio.setAttribute('static-body', '');
           }

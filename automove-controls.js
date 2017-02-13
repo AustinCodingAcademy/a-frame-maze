@@ -12,3 +12,4 @@ AFRAME.registerComponent('automove-controls', {
         return this.velocityDelta.clone();
     }
 });
+// universal-controls="movementControls: automove, gamepad, keyboard"
