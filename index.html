@@ -9,16 +9,17 @@
     <script src="./automove-controls.js" charset="utf-8"></script>
 </head>
 <body>
-<a-scene fog="type: exponential; color: #2A324C; density: 0.2;">
+<!-- <a-scene fog="type: exponential; color: #2A324C; density: 0.15;"> -->
+<a-scene>
     <a-assets>
-      <img id="texture-floor" src="floor.jpg">
-      <img id="texture-wall" src="wall.jpg">
+      <img id="texture-floor" src="floor-5.jpg">
+      <img id="texture-wall" src="wall-2.jpg">
+      <img id="sky" src="sky.jpg">
     </a-assets>
     <a-entity id="player"
               camera
-              universal-controls
-              kinematic-body
-              position="0 1.8 0">
+              universal-controls="movementControls: automove, gamepad, keyboard"
+              kinematic-body>
               <a-cursor id="cursor">
               <a-animation begin="click" easing="ease-in" attribute="scale"
                            fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
@@ -30,10 +31,10 @@
 
     <a-entity id="walls"></a-entity>
 
-    <a-grid id="ground" static-body material="src: #texture-floor"></a-grid>
+    <a-grid id="ground" static-body material="src: #texture-floor" geometry="width:200; height: 200;"></a-grid>
 
-    <a-light type="ambient" color="#92455E" intensity="0.4"></a-light>
-    <a-sky id="sky" color="#0000ff"></a-sky>
+    <a-light type="ambient" color="#736f7e" intensity="0.4"></a-light>
+    <a-sky id="sky" src="#sky" color="#fff"></a-sky>
 </a-scene>
 <script src="./generate-map.js" charset="utf-8"></script>
 </body>
