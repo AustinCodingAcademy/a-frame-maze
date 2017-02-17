@@ -1,0 +1,14 @@
+{
+  "name": "maze",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:canaandavis/a-frame-maze.git",
+  "author": "Canaan Davis <canaandavis@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "http-server"
+  },
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}
