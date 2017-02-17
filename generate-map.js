@@ -96,23 +96,9 @@ const buildWalls = () => {
 }
 
 const scene = document.querySelector('a-scene');
+
 if (scene.hasLoaded) {
   buildWalls();
 } else {
   scene.addEventListener('loaded', buildWalls);
 }
-
-
-// if (map.data[i] === 3) {
-//   var audio = document.createElement('a-entity');
-//   el.appendChild(audio);
-//   audio.setAttribute('material', 'color: blue;');
-//   audio.setAttribute('geometry', 'primitive: box;');
-//   audio.setAttribute('sound', 'src: url(Halloween.mp3); autoplay: true; loop:true;');
-//   audio.setAttribute('position', position);
-//   audio.setAttribute('static-body', '');
-// }
-//
-// if (map.data[i] === 4) {
-//
-// }
